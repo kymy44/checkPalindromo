@@ -17,6 +17,11 @@ for (let i = word.length; i > 0; i--) {
 }
 console.log(typeof word, word);
 console.log(typeof flipped, flipped);
-word.join === flipped.join //js no compara arrays directamente pq compara sus referencias a las variables
+word = word.join();
+flipped = flipped.join();
+
+console.log(typeof word, word);
+console.log(typeof flipped, flipped);
+word === flipped //js no compara arrays directamente pq compara sus referencias a las variables
 	? console.log("Es palindromo")
 	: console.log("no es palindromo");
